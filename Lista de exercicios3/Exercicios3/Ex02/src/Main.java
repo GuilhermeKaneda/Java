@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n;
+        int maior = 0;
+        int menor = 0;
+        List<Integer> numbers = new ArrayList<>();
+
+        for (int j = 0; j < 5; j++) {
+            System.out.print("Digite um número: ");
+            n = in.nextInt();
+            numbers.add(n);
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) > maior) {
+                maior = numbers.get(i);
+            }
+            if (numbers.get(i) < menor) {
+                menor = numbers.get(i);
+            }
+        }
+
+        System.out.println("0 maior número é: " + maior);
+        System.out.println("0 menor número é: " + menor);
+    }
+}

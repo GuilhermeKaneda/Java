@@ -11,8 +11,11 @@ public class Main {
         System.out.println(j);
         System.out.println(k);
 
-        while(i < n) {
+        while(true) {
             i = j + k;
+            if (i >= n) {
+                break;
+            }
             System.out.println(i);
             j = k;
             k = i;
